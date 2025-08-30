@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Assisted Form Filler</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div id="popup-content" class="container">
+        <h1 class="title">
+            <img src="icon32.png" class="title-icon" alt="Voice Assistant Icon" width="28" height="28">
+            Vaani
+        </h1>
+        
+        <div class="language-selector">
+            <label for="language">Select Language:</label>
+            <select id="language">
+                <option value="en">English</option>
+                <option value="hi">हिंदी</option>
+                <option value="bn">বাংলা</option>
+                <option value="ta">தமிழ்</option>
+                <option value="te">తెలుగు</option>
+                <option value="ml">മലയാളം</option>
+            </select>
+        </div>
+
+        <div class="accessibility-options compact">
+            <h2>Accessibility Options</h2>
+            
+            <div class="options-grid">
+                <div class="option">
+                    <label>
+                        <input type="checkbox" id="largeText"> Large Text
+                    </label>
+                </div>
+                <div class="option">
+                    <label>
+                        <input type="checkbox" id="keyboardNav"> Keyboard Navigation
+                    </label>
+                </div>
+                <div class="option">
+                    <label>
+                        <input type="checkbox" id="autoFocusForm"> Auto-Focus Fields
+                    </label>
+                </div>
+            </div>
+
+            <div class="theme-toggle-container">
+                <label>Theme Mode:</label>
+                <div class="theme-mode-option">
+                    <span>Light</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="darkMode">
+                        <span class="toggle-slider">
+                            <span class="moon-icon">🌙</span>
+                            <span class="sun-icon">☀️</span>
+                        </span>
+                    </label>
+                    <span>Dark</span>
+                </div>
+            </div>
+            
+            <div class="option">
+                <label for="voiceType">Voice Type:</label>
+                <select id="voiceType" class="voice-dropdown">
+                    <!-- Voice options will be populated by JavaScript -->
+                    <option value="default">Default Voice</option>
+                </select>
+            </div>
+            <div class="option">
+                <label for="voiceSpeed">Voice Speed:</label>
+                <div class="range-container">
+                    <input type="range" id="voiceSpeed" min="0.5" max="2" step="0.1" value="1">
+                    <div class="range-value"><span id="speedValue">1.0</span>x</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="voice-controls">
+            <button id="startVoice" class="primary-button">Start Voice Input</button>
+            <button id="stopVoice" class="secondary-button">Stop Voice Input</button>
+            <button id="resetForm" class="secondary-button">Reset Form</button>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html> 

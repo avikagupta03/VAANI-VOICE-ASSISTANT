@@ -1,0 +1,15 @@
+{
+  "name": "form-filler",
+  "version": "1.0.0",
+  "description": "A Chrome extension that helps users fill out Indian government forms using voice commands and provides multilingual support with accessibility features.",
+  "main": "background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "canvas": "^3.1.0"
+  }
+}
